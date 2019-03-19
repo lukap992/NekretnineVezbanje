@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.DetailActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/detail_appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/detail_toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/detail_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="140dp"
+                android:minWidth="100dp"
+                android:maxHeight="150dp"
+                android:maxWidth="100dp"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:id="@+id/detail_nazivNekretnine"
+                android:layout_toRightOf="@id/detail_imageView"
+                android:text="Naziv Nekretnine:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/detail_opisNekretnine"
+                android:layout_below="@id/detail_nazivNekretnine"
+                android:text="Opis Nekretnine: "
+                android:layout_toRightOf="@id/detail_imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/detail_adresaNekretnine"
+                android:layout_toRightOf="@id/detail_imageView"
+                android:text="Adresa Agencije: "
+                android:layout_below="@id/detail_opisNekretnine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/detail_kvadratura"
+                android:text="Kvadratura: "
+                android:layout_toRightOf="@id/detail_imageView"
+                android:layout_below="@id/detail_adresaNekretnine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/detail_brojSobe"
+                android:text="Broj Sobe: "
+                android:layout_toRightOf="@id/detail_imageView"
+                android:layout_below="@id/detail_kvadratura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/detail_cena"
+                android:text="Cena Nekretnine: "
+                android:layout_toRightOf="@id/detail_imageView"
+                android:layout_below="@id/detail_brojSobe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/detail_brojtelefona"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_cena"
+                android:autoLink="phone"
+                android:clickable="true"
+                android:inputType="phone"
+                android:text="Broj Telefona:"
+                android:textAlignment="textStart"
+                android:textStyle="bold" />
+
+
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                android:layout_below="@id/detail_brojtelefona"
+                android:src="@drawable/reservation" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/drawer_pane_detail"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start">
+
+            <ListView
+                android:id="@+id/nav_list_detail"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"
+                android:background="@color/background_light"/>
+
+
+        </RelativeLayout>
+
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NekretnineVezbanje</string>
+
+    <string name="open_drawer">Open Nav Drawer</string>
+    <string name="close_drawer">Close Nav Drawer</string>
+
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Allow Notifications:"
+        android:key="settings_notification">
+
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="notify_settings"
+            android:title="Allow Notification"
+            android:summary="Would you like to allow App to send Notifications"/>
+
+
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="toast_settings"
+            android:title="Allow Toast/Snackbar"
+            android:summary="Allow texts that you succesfully updated something"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
